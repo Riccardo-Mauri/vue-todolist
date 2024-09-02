@@ -5,4 +5,16 @@ RESET
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    text-align: center;
+}
+h1{
+    padding-bottom: 50px;
+}
+ul >li{
+    font-size: 1.25rem;
+    font-weight: bolder;
+    padding: 10px;
+}
+.done{
+    text-decoration: line-through;
 }

@@ -8,7 +8,28 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-    <h1>ciao mondo</h1>
+    <div id="app">
+        <h1>La mia lista</h1>
+        <h2>N*{{todo.length}} cose da fare</h2>
+        <div>
+            <h5>
+                aggiungi alla lista qualcosa.
+            </h5>
+            <input  @keyup.enter="addTodo()" v-model="newTodo" type="text">
+            <button @click="addTodo()">
+                aggiungi
+            </button>
+        </div>
+        <ul>
+            <li  v-for="(item, index) in todo" :class="{ done: item.done}">
+                {{ item.text}}
+                <button @click="removeTodo()"> 
+                    X
+                </button>
+            </li>
+        </ul>
+
+    </div>
     <!--LINK DI VUE-->
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <!--LINK MY JS-->
